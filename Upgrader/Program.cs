@@ -60,7 +60,7 @@ namespace Upgrader
             {
                 if (Properties.Settings.Default.ShowUpgradeMessage)
                 {
-                    Application.Run(new frmUpdatePopup());
+                    Application.Run(new UpdatePopup());
                 }
             }
 
