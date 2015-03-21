@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Upgrader
 {
-    public partial class Form1 : Form
+    public partial class UpdatePopup : Form
     {
-        public Form1()
+        public UpdatePopup()
         {
             InitializeComponent();
+        }
+
+        private void UpdatePopup_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

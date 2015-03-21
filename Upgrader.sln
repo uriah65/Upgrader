@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.22609.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upgrader", "Upgrader\Upgrader.csproj", "{50922141-5635-4BA8-B6EB-EB887345ED3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upgrader.Test", "Upgrader.Test\Upgrader.Test.csproj", "{95C6A355-EFCC-44BE-B35F-EFA89C5CF822}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upgrader.Lib", "Upgrader.Lib\Upgrader.Lib.csproj", "{E3CFD7BB-8C37-45F6-9289-6BDD54713878}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{50922141-5635-4BA8-B6EB-EB887345ED3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50922141-5635-4BA8-B6EB-EB887345ED3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50922141-5635-4BA8-B6EB-EB887345ED3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95C6A355-EFCC-44BE-B35F-EFA89C5CF822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C6A355-EFCC-44BE-B35F-EFA89C5CF822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C6A355-EFCC-44BE-B35F-EFA89C5CF822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C6A355-EFCC-44BE-B35F-EFA89C5CF822}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3CFD7BB-8C37-45F6-9289-6BDD54713878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CFD7BB-8C37-45F6-9289-6BDD54713878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3CFD7BB-8C37-45F6-9289-6BDD54713878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CFD7BB-8C37-45F6-9289-6BDD54713878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
