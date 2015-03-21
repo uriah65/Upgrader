@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Upgrader.Lib\ConstantsPR.cs">
+      <Link>ConstantsPR.cs</Link>
+    </Compile>
+    <Compile Include="..\Upgrader.Lib\DeployAction.cs">
+      <Link>DeployAction.cs</Link>
+    </Compile>
+    <Compile Include="..\Upgrader.Lib\FileHelpers.cs">
+      <Link>FileHelpers.cs</Link>
+    </Compile>
+    <Compile Include="..\Upgrader.Lib\UiException.cs">
+      <Link>UiException.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UpdatePopup.cs">
@@ -87,12 +100,6 @@
     <Content Include="Resources\upgrade5.ico" />
     <Content Include="Resources\upgrade6.ico" />
     <Content Include="Resources\upgrade7.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Upgrader.Lib\Upgrader.Lib.csproj">
-      <Project>{e3cfd7bb-8c37-45f6-9289-6bdd54713878}</Project>
-      <Name>Upgrader.Lib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

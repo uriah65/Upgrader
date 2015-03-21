@@ -7,19 +7,6 @@ namespace DeployerLib
 {
     public class DeployAction
     {
-        /*
-                                                           () => ExecutingDirectory
-        1. Read.ini                                        () => BaseDirectory, BaseFile, Ex1, ... Ex5
-        2. Read manifest from base                         (BaseDirectory, BaseFile) => FileList
-        3. Check for pressure, and abort if not            (BaseDirectory,ExecutingDirectory,FileList) => PressureList
-        4. Check if exe are locked                         (ExecutingDirectory,FileList) => yes/no
-        5. Remove read-only from target pressure.          (ExecutingDirectory,PressureList) =>  P.S. If source is read-only, - error / warning?
-        6. Start copy pressure                             (BaseDirectory,ExecutingDirectory,FileList)
-
-        7. Execute requested                               Ex1, .... Ex5
-
-        */
-
         public readonly string _sourceDirectory;
         public readonly string _destinationDirectory;
         public readonly string _manifestFileName;
