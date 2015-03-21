@@ -52,7 +52,7 @@ namespace DeployerLib
                 files = fileInfos.Select(e => e.Name).ToList();
             }
 
-            // unify case for comparasion
+            // unify case for comparison
             files = files.Select(e => e.ToLowerInvariant()).ToList();
 
             files = ExcludeNoCopyFiles(files);
@@ -96,7 +96,7 @@ namespace DeployerLib
             }
             try
             {
-                string text = System.IO.File.ReadAllText(stopFilePath);
+                string text = File.ReadAllText(stopFilePath);
                 return text;
             }
             catch

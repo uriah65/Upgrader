@@ -76,7 +76,7 @@ namespace Upgrader
                 return;
             }
 
-            // running postupgrade commands
+            // running post-upgrade commands
             action.ExecuteAfter();
         }
     }
