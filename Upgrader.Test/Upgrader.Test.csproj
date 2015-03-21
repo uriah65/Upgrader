@@ -50,13 +50,24 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ConstantsPR.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="T10_TestingInfrastructure.cs" />
+    <Compile Include="T20_FileOperations.cs" />
+    <Compile Include="T30_Main.cs" />
+    <Compile Include="T31_Main_Human.cs" />
+    <Compile Include="T40_StopFile.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Upgrader.Lib\Upgrader.Lib.csproj">
       <Project>{e3cfd7bb-8c37-45f6-9289-6bdd54713878}</Project>
       <Name>Upgrader.Lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestGround\Manual_Test\" />
+    <Folder Include="TestGround\TestBase\" />
+    <Folder Include="TestGround\TestTarget\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
