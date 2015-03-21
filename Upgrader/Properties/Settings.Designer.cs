@@ -25,15 +25,6 @@ namespace Upgrader.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\FSCO Intranet_files\\")]
-        public string SourceDirectory {
-            get {
-                return ((string)(this["SourceDirectory"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string ManifestFile {
             get {
@@ -61,7 +52,16 @@ namespace Upgrader.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Upgrader")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\Upgrader_base_files\\")]
+        public string SourceDirectory {
+            get {
+                return ((string)(this["SourceDirectory"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Up-grader")]
         public string ApplicationName {
             get {
                 return ((string)(this["ApplicationName"]));
