@@ -35,36 +35,36 @@ namespace Upgrader.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string StartupArguments {
+        public string StartupApplicationExe {
             get {
-                return ((string)(this["StartupArguments"]));
+                return ((string)(this["StartupApplicationExe"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool ShowUpgradeMessage {
+        public bool ShowUpgradePopup {
             get {
-                return ((bool)(this["ShowUpgradeMessage"]));
+                return ((bool)(this["ShowUpgradePopup"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\Temp\\Upgrader_base_files\\")]
-        public string SourceDirectory {
+        public string DeploymentDirectory {
             get {
-                return ((string)(this["SourceDirectory"]));
+                return ((string)(this["DeploymentDirectory"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Up-grader")]
-        public string ApplicationName {
+        public string StartupApplicationName {
             get {
-                return ((string)(this["ApplicationName"]));
+                return ((string)(this["StartupApplicationName"]));
             }
         }
     }

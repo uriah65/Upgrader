@@ -20,7 +20,7 @@ namespace Upgrader
             {
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
-                ConstantsPR.ApplicationName = Properties.Settings.Default.ApplicationName;
+                ConstantsPR.ApplicationName = Properties.Settings.Default.StartupApplicationName;
                 Main_Inner(args);
             }
             catch (UiException ex)
@@ -43,9 +43,9 @@ namespace Upgrader
 
             // reading configuration and arguments
             List<string> argsList = args.ToList();
-            string sourcePath = Properties.Settings.Default.SourceDirectory;
+            string sourcePath = Properties.Settings.Default.DeploymentDirectory;
             string manifestFile = Properties.Settings.Default.ManifestFile;
-            string startExe = Properties.Settings.Default.StartupArguments;
+            string startExe = Properties.Settings.Default.StartupApplicationExe;
             if (string.IsNullOrWhiteSpace(startExe) == false)
             {
                 argsList.Insert(0, startExe);
@@ -58,7 +58,7 @@ namespace Upgrader
             int ix = action.Act();
             if (ix > 0)
             {
-                if (Properties.Settings.Default.ShowUpgradeMessage)
+                if (Properties.Settings.Default.ShowUpgradePopup)
                 {
                     Application.Run(new UpdatePopup());
                 }

@@ -5,16 +5,16 @@
     <Setting Name="ManifestFile" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="StartupArguments" Type="System.String" Scope="Application">
+    <Setting Name="StartupApplicationExe" Type="System.String" Scope="Application">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="ShowUpgradeMessage" Type="System.Boolean" Scope="Application">
+    <Setting Name="ShowUpgradePopup" Type="System.Boolean" Scope="Application">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="SourceDirectory" Type="System.String" Scope="Application">
+    <Setting Name="DeploymentDirectory" Type="System.String" Scope="Application">
       <Value Profile="(Default)">C:\Temp\Upgrader_base_files\</Value>
     </Setting>
-    <Setting Name="ApplicationName" Type="System.String" Scope="Application">
+    <Setting Name="StartupApplicationName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Up-grader</Value>
     </Setting>
   </Settings>
