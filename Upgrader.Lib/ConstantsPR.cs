@@ -17,10 +17,10 @@ namespace DeployerLib
 
 
         public static List<string> NoCopyFiles = new List<string>() {
-            "Upgraderr.exe".ToLowerInvariant(),
-            "Upgrader.Lib.dll".ToLowerInvariant(),
+            "Upgrader.exe".ToLowerInvariant(),
+            /*"Upgrader.Lib.dll".ToLowerInvariant(),*/
             STOP_FILE_NAME.ToLowerInvariant(),
-            /*"Deployer.exe.config", */
+            /*"Upgrader.exe.config", */
         };
     }
 }
