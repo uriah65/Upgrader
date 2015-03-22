@@ -27,7 +27,7 @@ namespace Tests
             _pwans.EmptyDirectory(ConstantsPR.TestSourcePath);
             _pwans.EmptyDirectory(ConstantsPR.TestTargetPath);
 
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, null);
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, null, false);
         }
 
         [TestCleanup()]
@@ -83,7 +83,7 @@ namespace Tests
             _pwans.MoveToSource("an", "bn", "cn", "dn", "en", "fn", "m1n");
 
             /* trigger update with a.txt as manifest */
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, "m1.manifest", null);
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, "m1.manifest", null, false);
             _action.Act();
 
             /* all file has been copied, but not cn which is absent in manifest */
@@ -98,7 +98,7 @@ namespace Tests
             _pwans.MoveToTarget("an", "bn", "cn", "dn", "en", "fn");
 
             /* trigger update with a.txt as manifest */
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, "m2.manifest", null);
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, "m2.manifest", null, false);
             _action.Act();
 
             /* all file has been copied, but not cn which is absent in manifest */
@@ -113,7 +113,7 @@ namespace Tests
             _pwans.MoveToTarget("an", "bn", "co", "dn", "en", "fn");
 
             /* trigger update with a.txt as manifest */
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, "m3.manifest", null);
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, "m3.manifest", null, false);
             _action.Act();
 
             /* all file has been copied, but not cn which is absent in manifest */

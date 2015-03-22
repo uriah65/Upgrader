@@ -26,7 +26,7 @@ namespace Tests
             _dummies.EmptyDirectory(ConstantsPR.TestSourcePath);
             _dummies.EmptyDirectory(ConstantsPR.TestTargetPath);
 
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, null);
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, null, false);
         }
 
         [TestCleanup()]

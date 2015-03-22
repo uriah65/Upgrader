@@ -10,6 +10,7 @@ namespace DeployerLib
         public readonly string _sourceDirectory;
         public readonly string _destinationDirectory;
         public readonly string _manifestFileName;
+        public readonly bool _allowOffline;
         public readonly List<string> _executeArgs;
         private bool _overWrite;
 
@@ -17,16 +18,30 @@ namespace DeployerLib
 
         public List<string> _executables;
 
-        public DeployAction(string sourceDirectory, string destinationDirectory, string manifestFileName, List<string> executeArgs)
+        public DeployAction(string sourceDirectory, string destinationDirectory, string manifestFileName, List<string> executeArgs, bool allowOffline)
         {
             _destinationDirectory = destinationDirectory.Trim();
             _sourceDirectory = sourceDirectory.Trim();
             _manifestFileName = manifestFileName;
+            _allowOffline = allowOffline;
             _executeArgs = executeArgs;
         }
 
         public int Act()
         {
+            if (Directory.Exists(_sourceDirectory) == false)
+            {
+                if (_allowOffline)
+                {
+                    return 0;
+                }
+                else
+                {
+                    throw new UiException("Application deployment directory is unavailable.");
+                }
+            }
+
+
             files = null;
             if (!string.IsNullOrEmpty(_manifestFileName))
             {

@@ -46,15 +46,14 @@ namespace Upgrader
             string sourcePath = Properties.Settings.Default.DeploymentDirectory;
             string manifestFile = Properties.Settings.Default.ManifestFile;
             string startExe = Properties.Settings.Default.StartupApplicationExe;
+            bool allowOfline = Properties.Settings.Default.AllowOffline;
             if (string.IsNullOrWhiteSpace(startExe) == false)
             {
                 argsList.Insert(0, startExe);
             }
 
-            //throw new ApplicationException("test");
-
-            // performing upgrade action
-            DeployAction action = new DeployAction(sourcePath, targetPath, manifestFile, argsList);
+            // ACTION: performing upgrade action
+            DeployAction action = new DeployAction(sourcePath, targetPath, manifestFile, argsList, allowOfline);
             int ix = action.Act();
             if (ix > 0)
             {
@@ -64,7 +63,7 @@ namespace Upgrader
                 }
             }
 
-            // check for stop file
+            // ACTION: check for stop file
             string message = action.CheckStopFile();
             if (message != null)
             {
@@ -76,7 +75,7 @@ namespace Upgrader
                 return;
             }
 
-            // running post-upgrade commands
+            // ACTION: running post-upgrade commands
             action.ExecuteAfter();
         }
     }

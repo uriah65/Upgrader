@@ -22,7 +22,7 @@ namespace Tests
             _dummies.EmptyDirectory(ConstantsPR.TestSourcePath);
             _dummies.EmptyDirectory(ConstantsPR.TestTargetPath);
 
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, null);
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, null, false);
         }
 
         [TestCleanup()]
@@ -36,7 +36,7 @@ namespace Tests
             return;
             _dummies.MoveToSource("fn");
 
-            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, new List<string>() { "f.exe", "a1", "a2", "a3" });
+            _action = new DeployAction(ConstantsPR.TestSourcePath, ConstantsPR.TestTargetPath, null, new List<string>() { "f.exe", "a1", "a2", "a3" }, false);
             _action.Act();
 
             /* we expect to see f.exe window with arguments a1, a2 and a3 */
