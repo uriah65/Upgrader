@@ -17,5 +17,8 @@
     <Setting Name="StartupApplicationName" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Up-grader</Value>
     </Setting>
+    <Setting Name="AllowOffline" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

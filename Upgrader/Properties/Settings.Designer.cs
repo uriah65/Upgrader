@@ -67,5 +67,14 @@ namespace Upgrader.Properties {
                 return ((string)(this["StartupApplicationName"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AllowOffline {
+            get {
+                return ((bool)(this["AllowOffline"]));
+            }
+        }
     }
 }

@@ -70,7 +70,7 @@ namespace Upgrader
             {
                 if (message == "")
                 {
-                    message = "Access to the application '" + ConstantsPR.ApplicationName + "' has been temporarily suspended.";
+                    message = "Access to the application '" + ConstantsPR.ApplicationName + "' is temporarily suspended.";
                 }
                 MessageBox.Show(message, ConstantsPR.ApplicationName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
