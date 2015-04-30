@@ -23,7 +23,6 @@ namespace f
             }
 
             this.textBox1.Text = wrap;
-            //test
         }
     }
 }
