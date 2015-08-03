@@ -57,6 +57,5 @@ namespace DeployerLib
             Process process = Process.Start(startInfo);
             return process;
         }
-
     }
 }

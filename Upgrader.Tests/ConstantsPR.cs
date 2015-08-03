@@ -3,7 +3,6 @@
     internal static class ConstantsPR
     {
         private const string _base = @"..\..\..\Upgrader.Tests\";
-   
 
         public const string SourceOldPath = _base + @"Infrastructure\SourceOld";
         public const string SourceNewPath = _base + @"Infrastructure\SourceNew";

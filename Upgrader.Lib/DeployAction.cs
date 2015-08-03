@@ -66,7 +66,8 @@ namespace DeployerLib
                 return 0;
             }
 
-            List<string> executables = files.Where(e => e.ToLower().EndsWith(".exe")).ToList();
+            //List<string> executables = files.Where(e => e.ToLower().EndsWith(".exe")).ToList();
+            List<string> executables = olderFiles.Where(e => e.ToLower().EndsWith(".exe")).ToList();
             List<string> locked = GetLocked(_destinationDirectory, executables);
             if (locked != null && locked.Count > 0)
             {
